@@ -1,0 +1,211 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5" style="border:2px solid #cecece;">
+
+    <br>
+    
+      <form #createform="ngForm">
+    
+        <div class=" text-center" >
+        <h3 style="font-weight: bold;">CANDIDATE ENROLLMENT FORM</h3>
+        </div>
+    
+        <br>
+
+        <div class='form-row' *ngIf='user.updatedUser'>
+
+          <div class='col-md-6'>
+            <h5 class='text-center'>Last Updated By : <span style="color: green; font-weight: bold;">{{user.updatedUser}}</span></h5>
+          </div>
+
+          <div class='col-md-6'>
+            <h5 class='text-center'>Last Updated On : <span style="color: green; font-weight: bold;">{{user.updateTime}}</span></h5>
+          </div>
+
+        </div>
+
+        <br>
+    
+        <div class="form-row">
+    
+          <div class=" form-group col-md-4 offset-1">
+            <label for="firstName">First Name</label>
+            <input type="text" readonly required id="firstName" name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName"  
+            class="form-control" placeholder="First Name">
+          </div>
+          
+          <div class="col-md-2">
+          </div>
+    
+          <div class="form-group col-md-4">
+            <label for="lastname">Last Name</label>
+            <input type="text" readonly required id="lastname" name="lastname" #lastname="ngModel" [(ngModel)]="user.lastName" 
+            class="form-control" placeholder="Last Name">
+          </div>
+    
+         </div>
+        
+        <br>
+    
+        <div class="form-row">
+    
+            <div class="form-group col-md-4 offset-1">
+            <label for="email">Email Address</label>
+            <input type="email" readonly required id="email" pattern="[^ @]*@[^ @]+\.[a-z]{2,}$" name="email" #email="ngModel" [(ngModel)]="user.email" 
+            class="form-control" placeholder="Enter email address">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+    
+            <div class="col-md-2">
+            </div>
+    
+            <div class="form-group col-md-4">
+                <label for="contact">Contact Number</label>
+                <input type="text" readonly required minlength="10" maxlength="10" id="contact" name="contact" #contact="ngModel" [(ngModel)]="user.contact" 
+                class="form-control" placeholder="Contact Number">
+            </div>
+    
+        </div>
+    
+        <br>
+    
+        <div class="form-row">
+    
+            <div class="form-group col-md-4 offset-1">
+                <label for="role">Job Role</label>
+              <input type="text" readonly required id="role" name="role" #role="ngModel" [(ngModel)]="user.role" 
+              class="form-control" placeholder="Job role">
+            </div>
+    
+            <div class="col-md-2">
+            </div>
+    
+            <div class="form-group col-md-4">
+                <label for="location">Job Location</label>
+              <input type="text" readonly required id="location" name="location" #location="ngModel" [(ngModel)]="user.location" 
+              class="form-control" placeholder="Job Location">
+            </div>
+    
+        </div>
+    
+        <br>
+    
+        <div class="form-row">
+    
+            <div class="form-group col-md-4 offset-1">
+                <label for="dob">Date of Birth</label>
+              <input type="date" readonly required id="dob" name="dob" #dob="ngModel" [(ngModel)]="user.dob" 
+              class="form-control" >
+            </div>
+    
+            <div class="col-md-2">
+            </div>
+    
+            <div class="form-group col-md-4">
+                <label for="doj">Date of Joining</label>
+              <input type="date" readonly required id="doj" name="doj" #doj="ngModel" [(ngModel)]="user.doj" 
+              class="form-control" >
+            </div>
+    
+        </div>
+    
+        <br>
+    
+        <div class="form-row">
+    
+            <div class="form-group col-md-4 offset-1">
+              <label for="fathername">Father Name</label>
+              <input type="text" readonly required id="fathername" name="fathername" #fathername="ngModel" [(ngModel)]="user.fatherName"  
+              class="form-control" placeholder="Father Name">
+            </div>
+    
+            <div class="col-md-2">
+            </div>
+    
+            <div class="form-group col-md-4">
+              <label for="mothername">Mother Name</label>
+              <input type="text" readonly required id="mothername" name="mothername" #mothername="ngModel" [(ngModel)]="user.motherName" 
+               class="form-control" placeholder="Mother Name">
+            </div>
+    
+        </div>
+    
+        <br>
+    
+        <div class="form-row">
+            <div class="form-group col-md-10 offset-1">
+            <label for="address">Communication Address</label>
+            <textarea readonly required id="address" name="address" #address="ngModel" [(ngModel)]="user.address" 
+            class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+    
+        <br>
+    
+        <div class="form-row offset-1">
+    
+            <div class="form-group col-md-4 offset-1">
+              <label for="clg">College Name</label>
+              <input type="text" readonly required id="clg" name="clg" #clg="ngModel" [(ngModel)]="user.collegeName" 
+              class="form-control" placeholder="College Name">
+            </div>
+    
+            <div class="col-md-2">
+            </div>
+    
+            <div class="form-group col-md-4">
+              <label for="dept">Department</label>
+              <input type="text" readonly required id="dept" name="dept" #dept="ngModel" [(ngModel)]="user.dept" 
+              class="form-control" placeholder="Department">
+            </div>
+    
+        </div>
+    
+        <br>
+    
+        <div class="form-row">
+    
+            <div class="form-group col-md-4 offset-1">
+                <label for="skill">Expertised Skill</label>
+                <input type="text" readonly required id="skill" name="skill" #skill="ngModel" [(ngModel)]="user.skill" 
+                class="form-control">
+            </div>
+    
+            <div class="col-md-2">
+            </div>
+    
+            <div class="form-group col-md-4">
+              <label for="yopo">Year of Passed Out</label>
+              <input type="text" readonly required id="yopo" name="yopo" #yopo="ngModel" [(ngModel)]="user.yearOfPassedOut" 
+              class="form-control" placeholder="Example 2020, 2021, ..">
+            </div>
+    
+        </div>
+    
+        <br>
+        <br>
+    
+      </form>
+
+        <div class='row'>
+          <div class="col-md-1 offset-5">
+            <button  class="btn btn-primary " type="submit" (click)="edit(user.id,user.vid)">Edit</button>
+          </div>
+          <div class="col-md-1"> 
+            <a class='btn btn-primary'  href="search">Cancel</a> 
+          </div>
+        </div>
+    
+        <br>
+        <br>
+    
+    </div>
+
+        <br>
+        <br>
+    
+    
+    
+    
+    
+      

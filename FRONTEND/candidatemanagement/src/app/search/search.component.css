@@ -1,0 +1,55 @@
+
+body {
+    background-color: #00838F;
+    
+}
+
+.advanced {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500
+}
+
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active {
+    color: #fff;
+    background-color: #00838f !important;
+    border-color: #00838f !important;
+    box-shadow: none
+}
+
+.advanced {
+    color: #00838f !important
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #00838f
+}
+
+input:focus
+{
+    outline: none;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+ ::ng-deep .modal-backdrop
+ {
+     z-index: -1;
+ }

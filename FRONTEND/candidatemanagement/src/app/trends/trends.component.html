@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container-fluid">
+    <h2 class="title mt-3">Trend Analysis</h2>
+    
+    <br>
+
+    <div class="row">
+        <div class='col-md-4 mt-3 ml-5'>
+            <h3 class='title'> Location </h3>
+            <ngx-charts-bar-vertical [view]="view" [scheme]="scheme" [results]="location"
+            [gradient]="gradient" [xAxis]="xAxis" [yAxis]="yAxis" [legend]="legend"
+            [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel1"
+                [yAxisLabel]="yAxisLabel" >
+            </ngx-charts-bar-vertical>
+        </div>
+        <div class='col-md-4 offset-2 mt-3'>
+            <h3 class='title'> Skill </h3>
+            <ngx-charts-bar-vertical [view]="view" [scheme]="scheme" [results]="skill"
+            [gradient]="gradient" [xAxis]="xAxis" [yAxis]="yAxis" [legend]="legend"
+            [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel2"
+                [yAxisLabel]="yAxisLabel" >
+            </ngx-charts-bar-vertical>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class='col-md-4 mt-3 ml-5'>
+            <h3 class='title'> Role </h3>
+            <ngx-charts-bar-vertical [view]="view" [scheme]="scheme" [results]="role"
+            [gradient]="gradient" [xAxis]="xAxis" [yAxis]="yAxis" [legend]="legend"
+            [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel3"
+                [yAxisLabel]="yAxisLabel" >
+            </ngx-charts-bar-vertical>
+        </div>
+        <div class='col-md-4 offset-2 mt-3'>
+            <h3 class='title'> Joining Year </h3>
+            <ngx-charts-bar-vertical [view]="view" [scheme]="scheme" [results]="doj"
+            [gradient]="gradient" [xAxis]="xAxis" [yAxis]="yAxis" [legend]="legend"
+            [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel4"
+                [yAxisLabel]="yAxisLabel" >
+            </ngx-charts-bar-vertical>
+        </div>
+    </div>
+   
+    <br>
+    
+</div>

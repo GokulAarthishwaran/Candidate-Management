@@ -1,0 +1,100 @@
+<nav class="navbar px-3 px-lg-0 navbar-expand-lg py-3 py-lg-0" style="background-color: #001121;">
+
+  <a class="navbar-brand">
+      <img src="assets/logo.png" height="70%" width="70%" class="navbar-image">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav  mx-auto">
+      <li class="nav-item pr-5">
+        <a class="nav-link text-white h5 active" aria-current="page" href="#">Opportunity</a>
+      </li>
+      <li class="nav-item pr-5">
+        <a class="nav-link text-white h5 active" aria-current="page" href="search">Candidate</a>
+      </li>
+      <li class="nav-item pr-5">
+        <a class="nav-link text-white h5 active" aria-current="page" href="#">Course</a>
+      </li>
+      <li class="nav-item pr-5">
+        <a class="nav-link text-white h5 active" aria-current="page" href="#">Assessment</a>
+      </li>
+      <li class="nav-item pr-5">
+        <a class="nav-link text-white h5 active" aria-current="page" href="#">Onboarding-Portal</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav  ml-auto mr-3">
+      <li class='nav-item'>
+        <button class="btn btn-outline-danger" (click)="logout()">Signout</button>  
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
+
+
+
+<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bannerCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#bannerCarousel" data-slide-to="2" class=""></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item col-12 active" style="background-image: url('../../assets/banner1.jpg'); height: 695px;">
+            <div class="container-xxl">
+                <div class="col-12 p-5 caption-container">
+                <div class="col-12 p-5 caption">
+                    <h2 class="text-uppercase"> Hello {{name}}!! <br> welcome to Accolite!!!</h2>
+                    <div class="col-12 p-5">
+                        <div class="col-md-4 px-0 py-3">
+                            <hr class="white-border">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item col-12" style="background-image: url('../../assets/banner2.jpg');  height: 695px;">
+            <div class="container-xxl">
+                <div class="col-12 p-5 caption-container">
+                <div class="col-12 p-5 caption">
+                    <h2 class="text-uppercase text-white">Delivering innovation</h2>
+                    <div class="col-12 p-5">
+                        <div class="col-md-4 px-0 py-3">
+                            <hr class="white-border">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+		    <div class="carousel-item col-12" style="background-image: url('../../assets/banner3.jpg');  height: 695px;">
+            <div class="container-xxl">
+                <div class="col-12 p-5 caption-container">
+                <div class="col-12 p-5 caption">
+                    <h2 class="text-uppercase text-white">For the Best Technical Minds</h2>
+                    <div class="col-12 p-5">
+                        <div class="col-md-4 px-0 py-3">
+                            <hr class="white-border">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+ 
+  

@@ -1,0 +1,262 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5" style="border:2px solid #cecece;">
+<br>
+
+  <form #createform="ngForm">
+
+    <div class=" text-center" >
+    <h3 style="font-weight: bold;">CANDIDATE ENROLLMENT FORM</h3>
+    </div>
+
+    <br>
+
+    <div class="form-row">
+
+      <div class=" form-group col-md-4 offset-1">
+        <label for="firstName">First Name</label>
+        <input type="text" required id="firstName" name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName" [class.is-invalid]="firstName.invalid && firstName.touched" 
+        class="form-control" placeholder="First Name">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+          <div *ngIf="firstName.errors.required">First Name is required</div>
+        </div>
+      </div>
+      
+      <div class="col-md-2">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="lastname">Last Name</label>
+        <input type="text" required id="lastname" name="lastname" #lastname="ngModel" [(ngModel)]="user.lastName" [class.is-invalid]="lastname.invalid && lastname.touched" 
+        class="form-control" placeholder="Last Name">
+        <div class="alert alert-danger" *ngIf="lastname.touched && !lastname.valid">
+          <div *ngIf="lastname.errors.required">Last Name is required</div>
+        </div>
+      </div>
+
+     </div>
+    
+    <br>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4 offset-1">
+        <label for="email">Email Address</label>
+        <input type="email" required id="email" pattern="[^ @]*@[^ @]+\.[a-z]{2,}$" name="email" #email="ngModel" [(ngModel)]="user.email" [class.is-invalid]="email.invalid && email.touched"
+        class="form-control" placeholder="Enter email address">
+        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+          <div *ngIf="email.errors.required">Email address is required</div>
+          <div *ngIf="email.hasError('pattern')">Email address is invalid</div>
+        </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="contact">Contact Number</label>
+            <input type="text" minlength="10" maxlength="10" pattern="[0-9]{10}" required id="contact" name="contact" #contact="ngModel" [(ngModel)]="user.contact" [class.is-invalid]="contact.invalid && contact.touched"
+            class="form-control" placeholder="Contact Number">
+            <div class="alert alert-danger" *ngIf="contact.touched && contact.invalid">
+              <div *ngIf="contact.errors.required">Contact number is required</div>
+              <div *ngIf="contact.errors.minlength">Invalid Contact number</div>
+              <div *ngIf="contact.errors.maxlength">Invalid Contact number</div>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="form-row">
+ 
+        <div class="form-group col-md-4 offset-1">
+          <label for="role">Job Role</label>
+          <select required id="role" name="role" #role="ngModel" [(ngModel)]="user.role" [class.is-invalid]="role.invalid && role.touched"
+          class="form-select form-control">
+          <option value="Intern">Intern</option>
+          <option value="Software Developer">Software Developer</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option selected value="Associate Developer">Associate Developer</option>
+          <option value="Associate Engineer">Associate Engineer</option>
+          <option value="HR">HR</option>
+          </select>
+          <div class="alert alert-danger" *ngIf="role.touched && !role.valid">
+            <div *ngIf="role.errors.required">Job Role is required</div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="location">Job Location</label>
+          <select required id="location" name="location" #location="ngModel" [(ngModel)]="user.location" [class.is-invalid]="location.invalid && location.touched"
+          class="form-select form-control">
+          <option value="Chennai">Chennai</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Mumbai">Mumbai</option>
+          </select>
+          <div class="alert alert-danger" *ngIf="location.touched && !location.valid">
+            <div *ngIf="location.errors.required">Job Location is required</div>
+          </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4 offset-1">
+          <label for="dob">Date of Birth</label>
+          <input type="date" required id="dob" name="dob" #dob="ngModel" [(ngModel)]="user.dob" [class.is-invalid]="dob.invalid && dob.touched" 
+          class="form-control" >
+          <div class="alert alert-danger" *ngIf="dob.touched && !dob.valid">
+            <div *ngIf="dob.errors.required">Date of Birth is required</div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="doj">Date of Joining</label>
+          <input type="date" required id="doj" name="doj" #doj="ngModel" [(ngModel)]="user.doj" [class.is-invalid]="doj.invalid && doj.touched" 
+          class="form-control" >
+          <div class="alert alert-danger" *ngIf="doj.touched && !doj.valid">
+            <div *ngIf="doj.errors.required">Date of Joining is required</div>
+          </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4 offset-1">
+          <label for="fathername">Father Name</label>
+          <input type="text" required id="fathername" name="fathername" #fathername="ngModel" [(ngModel)]="user.fatherName" [class.is-invalid]="fathername.invalid && fathername.touched" 
+          class="form-control" placeholder="Father Name">
+          <div class="alert alert-danger" *ngIf="fathername.touched && !fathername.valid">
+            <div *ngIf="fathername.errors.required">Father Name is required</div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="mothername">Mother Name</label>
+          <input type="text" required id="mothername" name="mothername" #mothername="ngModel" [(ngModel)]="user.motherName" [class.is-invalid]="mothername.invalid && mothername.touched"
+          class="form-control" placeholder="Mother Name">
+          <div class="alert alert-danger" *ngIf="mothername.touched && !mothername.valid">
+            <div *ngIf="mothername.errors.required">Mother Name is required</div>
+          </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="form-row">
+        <div class="form-group col-md-10 offset-1">
+        <label for="address">Communication Address</label>
+        <textarea required id="address" name="address" #address="ngModel" [(ngModel)]="user.address" [class.is-invalid]="address.invalid && address.touched" 
+        class="form-control" rows="3"></textarea>
+        <div class="alert alert-danger" *ngIf="address.touched && !address.valid">
+          <div *ngIf="address.errors.required">Communication Address is required</div>
+        </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="form-row offset-1">
+
+        <div class="form-group col-md-4 offset-1">
+          <label for="clg">College Name</label>
+          <input type="text" required id="clg" name="clg" #clg="ngModel" [(ngModel)]="user.collegeName" [class.is-invalid]="clg.invalid && clg.touched"
+          class="form-control" placeholder="College Name">
+          <div class="alert alert-danger" *ngIf="clg.touched && !clg.valid">
+            <div *ngIf="clg.errors.required">College Name is required</div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="dept">Department</label>
+          <input type="text" required id="dept" name="dept" #dept="ngModel" [(ngModel)]="user.dept" [class.is-invalid]="dept.invalid && dept.touched"
+          class="form-control" placeholder="Department">
+          <div class="alert alert-danger" *ngIf="dept.touched && !dept.valid">
+            <div *ngIf="dept.errors.required">Department name is required</div>
+          </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4 offset-1">
+            <label for="skill">Expertised Skill</label>
+            <select required id="skill" name="skill" #skill="ngModel" [(ngModel)]="user.skill" [class.is-invalid]="skill.invalid && skill.touched" 
+            class="form-select form-control">
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option selected value="Angular">Angular</option>
+            <option value="Spring">Spring</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="skill.touched && !skill.valid">
+              <div *ngIf="skill.errors.required">Expertised Skill is not selected</div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="yopo">Year of Passed Out</label>
+          <input type="number" pattern="[0-9]{4}" required id="yopo" name="yopo" #yopo="ngModel" [(ngModel)]="user.yearOfPassedOut" [class.is-invalid]="yopo.invalid && yopo.touched"
+          class="form-control" placeholder="Example 2020, 2021, ..">
+          <div class="alert alert-danger" *ngIf="yopo.touched && !yopo.valid">
+            <div *ngIf="yopo.errors.required">Year of Passed Out is required</div>
+          </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+  </form>
+
+    <div class='row'>
+      <div class="col-md-1 offset-5">
+        <button [disabled]="createform.form.invalid" class="btn btn-primary " type="submit" (click)="create()">CREATE</button>
+      </div>
+      <div class="col-md-1"> 
+        <a class='btn btn-primary'  href="search">CANCEL</a> 
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+</div>
+
+    <br>
+    <br>
+
+
+
+
+
+  
